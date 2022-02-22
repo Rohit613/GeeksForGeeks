@@ -1,0 +1,32 @@
+# Program to move all zeroes at the end of array and preserve the order of array.
+
+
+public class MoveZeros{
+    public static void main(String [] args)
+	{
+	 int [] arr = {8,5,0,10,0,20};
+	  int zeroPtr = -1;
+	 for(int i = 0; i < arr.length;i++)
+	 {
+	   if(arr[i]==0) {zeroPtr = i ;
+	   System.out.println(zeroPtr+ "zero");
+	   break;}
+	 }
+	 int n = zeroPtr;
+	 for(int i = zeroPtr+1; i<arr.length;i++)
+	 {
+		 if(arr[i]!=0){
+		   arr[zeroPtr] = arr[i];
+		   arr[i] = 0;
+		   zeroPtr++;
+		   }
+           		   
+     }
+	 for(int i =0;i<arr.length;i++)
+	 {
+	 System.out.println(arr[i]);
+	 }
+	 
+	}
+
+}
